@@ -336,7 +336,7 @@ footer {
 
 
 .ver-mais {
-  background: linear-gradient(135deg, #4152ec, #3fcc2d, #40f8c1);
+  background: linear-gradient(135deg, #4152ec, #1dceb0, #e719b4);
   color: white;
   border: none;
   padding: 14px 28px;
@@ -431,49 +431,33 @@ footer {
 }
 
 .btn-voltar {
-  background: transparent;
-  color: #1900ff;
+  background: linear-gradient(90deg, #ffe600, #ff4ecb, #00eaff);
+  color: #000;
   font-size: 18px;
   font-weight: bold;
   padding: 12px 24px;
-  border: 2px solid #ffe600;
+  border: none;
   border-radius: 50px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   cursor: pointer;
-  transition: all 0.3s ease;
-  position: relative;
-  overflow: hidden;
-  z-index: 1;
-  animation: vibrarSuave 2s infinite;
+  transition: transform 0.2s ease;
 }
 
-.btn-voltar::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, #ffe600, #ff4ecb, #00eaff);
-  transition: all 0.4s ease;
-  z-index: -1;
-}
-
-.btn-voltar:hover::before {
-  left: 0;
+.btn-voltar i {
+  background: white;
+  border-radius: 50%;
+  padding: 4px;
+  font-size: 16px;
+  color: #00aaff;
 }
 
 .btn-voltar:hover {
-  color: #000;
-  border-color: transparent;
+  transform: scale(1.03);
 }
 
-@keyframes vibrarSuave {
-  0%, 100% { transform: translateX(0); }
-  20% { transform: translateX(-1px); }
-  40% { transform: translateX(1px); }
-  60% { transform: translateX(-1px); }
-  80% { transform: translateX(1px); }
-}
 
 @media (max-width: 600px) {
   .btn-voltar {
@@ -494,7 +478,7 @@ footer {
   background: #fff8dc;
   border: 2px solid #f4c531;
   border-radius: 12px;
-  padding: 20px 30px;
+  padding: 20px 9px;
   max-width: 90%;
   box-shadow: 0 4px 10px rgba(0,0,0,0.15), 0 0 20px rgba(255, 239, 184, 0.6);
   transform-style: preserve-3d;
