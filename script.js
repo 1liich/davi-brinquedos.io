@@ -32,11 +32,23 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('conteudo-principal').classList.add('oculto');
     document.querySelectorAll('.aba-conteudo').forEach(sec => sec.classList.remove('ativa'));
     document.getElementById(id).classList.add('ativa');
+
+    // Faz scroll pro topo da aba
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
   };
 
   window.voltarInicio = function() {
     document.getElementById('conteudo-principal').classList.remove('oculto');
     document.querySelectorAll('.aba-conteudo').forEach(sec => sec.classList.remove('ativa'));
+
+    // Faz scroll pro topo da home
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
   };
 
   // Lightbox com navegação
@@ -88,4 +100,21 @@ document.addEventListener('DOMContentLoaded', () => {
     indexAtual = (indexAtual + 1) % listaImagens.length;
     atualizarImagem(indexAtual);
   });
+});
+
+// Botão voltar ao topo
+window.voltarAoTopo = function () {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+};
+
+window.addEventListener('scroll', () => {
+  const btnTopo = document.getElementById('btn-topo');
+  if (window.scrollY > 300) {
+    btnTopo.style.display = 'flex';
+  } else {
+    btnTopo.style.display = 'none';
+  }
 });
