@@ -696,6 +696,33 @@ footer p {
 }
 
 
+/* Botão voltar ao topo */
 
+#btn-topo {
+  position: fixed;
+  bottom: 85px;
+  right: 25px;
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  z-index: 1001;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
 
+#btn-topo:hover {
+  transform: scale(1.1);
+  background: linear-gradient(135deg, #2575fc, #6a11cb);
+}
 
+#btn-topo svg {
+  width: 26px;
+  height: 26px;
+}
