@@ -461,7 +461,7 @@ footer {
 
 @media (max-width: 600px) {
   .btn-voltar {
-    font-size: 14px;
+    font-size: 18px;
     padding: 10px 20px;
   }
 }
