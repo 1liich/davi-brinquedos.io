@@ -3,29 +3,59 @@
 document.addEventListener('DOMContentLoaded', () => {
   console.log("Site de locação de brinquedos carregado!");
 
-  const promos = document.querySelectorAll('.promo-item');
-  promos.forEach(promo => {
-    promo.addEventListener('click', () => {
-      alert('Entre em contato pelo WhatsApp para aproveitar esta promoção!');
+  // Carrossel de imagens / Final: autoSlide
+  let index = 0;
+  let intervalo;
+  const carrossel = document.getElementById("carrossel");
+  const imagens = carrossel.querySelectorAll("img");
+  const total = imagens.length;
+  const indicadoresContainer = document.getElementById("indicadores");
+
+  // Criar bolinhas
+  imagens.forEach((_, i) => {
+    const dot = document.createElement("span");
+    dot.classList.add("dot");
+    if (i === 0) dot.classList.add("active");
+    dot.addEventListener("click", () => {
+      index = i;
+      atualizarCarrossel();
+      reiniciarAutoSlide();
     });
+    indicadoresContainer.appendChild(dot);
   });
 
-  let index = 0;
-  const carrossel = document.querySelector('.carrossel');
-  const imagens = document.querySelectorAll('.carrossel img');
-  const total = imagens.length;
-
-  const moverCarrossel = (direcao = 1) => {
+  function moverCarrossel(direcao) {
     index += direcao;
-    if (index >= total) index = 0;
     if (index < 0) index = total - 1;
+    if (index >= total) index = 0;
+    atualizarCarrossel();
+    reiniciarAutoSlide();
+  }
+
+  function atualizarCarrossel() {
     carrossel.style.transform = `translateX(-${index * 100}%)`;
-  };
+    document.querySelectorAll(".dot").forEach((dot, i) => {
+      dot.classList.toggle("active", i === index);
+    });
+  }
 
-  document.querySelector('.carrossel-btn.prev').addEventListener('click', () => moverCarrossel(-1));
-  document.querySelector('.carrossel-btn.next').addEventListener('click', () => moverCarrossel(1));
+  // Eventos dos botões
+  document.querySelector(".carrossel-btn.prev").addEventListener("click", () => moverCarrossel(-1));
+  document.querySelector(".carrossel-btn.next").addEventListener("click", () => moverCarrossel(1));
 
-  setInterval(() => moverCarrossel(1), 4000);
+  // Deslizamento automático
+  function autoSlide() {
+    intervalo = setInterval(() => {
+      moverCarrossel(1);
+    }, 5000); // 5 segundos
+  }
+
+  function reiniciarAutoSlide() {
+    clearInterval(intervalo);
+    autoSlide();
+  }
+
+  autoSlide(); // Inicia o automático
 
   // Eventos dos menus
   window.abrirAba = function(id) {
@@ -118,3 +148,43 @@ window.addEventListener('scroll', () => {
     btnTopo.style.display = 'none';
   }
 });
+
+
+// Função de promoções
+const promoContainer = document.getElementById("promo-container");
+
+const promocoes = [
+  {
+    titulo: "Promoções em breve!",
+    descricao: "Em breve!",
+    preco: "R$ 00,00",
+    imagem: ""
+  },
+  //{
+    //titulo: "Cama Elástica + Pula-pula",
+    //descricao: "Pacote especial fim de semana.",
+    //preco: "R$ 149,90",
+    //imagem: "imagens/cama-elastica.jpg"
+  //},
+  //{
+    //titulo: "Combo 3 Brinquedos",
+    //descricao: "Ideal para festas maiores.",
+    //preco: "R$ 199,90",
+    //imagem: "imagens/combo.jpg"
+  //}
+];
+
+
+promocoes.forEach(promo => {
+  const card = document.createElement("div");
+  card.className = "card-promocao";
+  card.innerHTML = `
+    <img src="${promo.imagem}" alt="${promo.titulo}" class="promo-img">
+    <h3>${promo.titulo}</h3>
+    <p>${promo.descricao}</p>
+    <div class="preco">${promo.preco}</div>
+  `;
+  promoContainer.appendChild(card);
+});
+
+
