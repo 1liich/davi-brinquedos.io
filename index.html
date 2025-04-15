@@ -77,12 +77,17 @@
     </div>
   </div>
 
-  <div class="promo-container">
-    <div class="promo-item">Em breve!</div>
+  <!-- Função de promoção -->
+<section class="secao-promocoes">
+  <div class="promo-cards-container" id="promo-container">
+    <!-- Cards inseridos via JS -->
   </div>
 </section>
 
-  
+  <div class="promo-container">
+  </div>
+</section>
+
       <!-- Galeria resumida (com carrossel) na HOME -->
       <section id="galeria">
         <div class="titulo-centralizado">
@@ -91,17 +96,23 @@
           <h2>BRINQUEDOS</h2>
         </div>
         <div class="carrossel-container">
-          <button class="carrossel-btn prev" onclick="moverCarrossel(-1)">&#10094;</button>
-          <div class="carrossel">
-            <img src="imagens/IMG-20230426-WA0033.jpg" alt="Brinquedo 1">
-            <img src="imagens/IMG-20230426-WA0059.jpg" alt="Brinquedo 2">
-            <img src="imagens/9aa505d1-7805-4757-950a-512891cf4504.jpg" alt="Brinquedo 3">
-            <img src="imagens/30008a3f-a22b-469e-a667-f2be42fdc649.jpg" alt="Brinquedo 4">
-            <img src="imagens/e338c962-b5ad-408c-9abd-6100ed9f7f10.jpg"Brinquedo 5">
+          <button class="carrossel-btn prev">‹</button>
+        
+          <div class="carrossel-wrapper">
+            <div class="carrossel" id="carrossel">
+              <img src="imagens/IMG-20230426-WA0033.jpg" alt="Brinquedo 1">
+              <img src="imagens/IMG-20230426-WA0059.jpg" alt="Brinquedo 2">
+              <img src="imagens/9aa505d1-7805-4757-950a-512891cf4504.jpg" alt="Brinquedo 3">
+              <img src="imagens/30008a3f-a22b-469e-a667-f2be42fdc649.jpg" alt="Brinquedo 4">
+              <img src="imagens/e338c962-b5ad-408c-9abd-6100ed9f7f10.jpg" alt="Brinquedo 5">
+            </div>
           </div>
-          <button class="carrossel-btn next" onclick="moverCarrossel(1)">&#10095;</button>
+        
+          <button class="carrossel-btn next">›</button>
+        
+          <div class="indicadores" id="indicadores"></div>
         </div>
-        <div style="text-align: center; margin-top: 20px;">
+        
           <button class="ver-mais" onclick="abrirAba('galeria-aba')">🔍 Ver mais imagens</button>
         </div>
       </section>
