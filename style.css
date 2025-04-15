@@ -286,17 +286,16 @@ footer {
   }
 }
 
+/* Carrossel de imagens */
 .carrossel-container {
   position: relative;
-  width: 100%;
   max-width: 800px;
   margin: 0 auto;
-  overflow: hidden;
-  padding: 20px 0;
 }
 
 .carrossel-wrapper {
   overflow: hidden;
+  width: 100%;
 }
 
 .carrossel {
@@ -306,24 +305,25 @@ footer {
 
 .carrossel img {
   width: 100%;
-  max-width: 100%;
-  flex: 0 0 100%;
+  flex-shrink: 0;
   object-fit: cover;
-  border-radius: 10px;
+  border-radius: 12px;
 }
 
+/* Botões */
 .carrossel-btn {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: #fff7e6;
+  background: #ff7f50;
   border: none;
-  font-size: 24px;
-  padding: 10px;
-  cursor: pointer;
-  z-index: 2;
+  padding: 12px;
   border-radius: 50%;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  cursor: pointer;
+  z-index: 10;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  font-size: 24px;
+  color: white;
 }
 
 .carrossel-btn.prev {
@@ -332,6 +332,27 @@ footer {
 
 .carrossel-btn.next {
   right: 10px;
+}
+
+/* Indicadores (bolinhas) */
+.indicadores {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.indicadores .dot {
+  height: 12px;
+  width: 12px;
+  margin: 0 5px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.3s;
+  cursor: pointer;
+}
+
+.indicadores .dot.active {
+  background-color: #ff7f50;
 }
 
 
@@ -725,4 +746,123 @@ footer p {
 #btn-topo svg {
   width: 26px;
   height: 26px;
+}
+
+/* Função de promoções */
+
+.promo-section {
+  width: 100%;
+  overflow-x: hidden;
+  padding: 30px 0;
+}
+
+.promo-title {
+  text-align: center;
+  font-size: 2em;
+  color: #ff6600;
+  margin-bottom: 20px;
+}
+
+.promo-cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  padding: 20px;
+}
+
+.card-promocao {
+  background-color: #fff;
+  border: 2px solid #d59012; /* cor viva da borda */
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 280px;
+  padding: 20px;
+  transition: transform 0.3s;
+  text-align: center;
+
+  animation: brilho-borda 2.5s infinite ease-in-out;
+}
+
+
+.card-promocao:hover {
+  transform: scale(1.05);
+}
+
+.card-promocao h3 {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+}
+
+.card-promocao p {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 12px;
+}
+
+.card-promocao .preco {
+  font-size: 1.4rem;
+  color: #e60000;
+  font-weight: bold;
+}
+
+.promo-cards-container::-webkit-scrollbar {
+  height: 8px;
+}
+
+.promo-cards-container::-webkit-scrollbar-thumb {
+  background-color: #ff9900;
+  border-radius: 4px;
+}
+
+.promo-cards-container::-webkit-scrollbar-track {
+  background: #ffe5b4;
+}
+
+.promo-card {
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  overflow: hidden;
+  width: 280px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+
+.promo-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.promo-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.promo-info {
+  padding: 15px;
+}
+
+.promo-info h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.promo-info p {
+  margin: 0;
+}
+
+@keyframes brilho-borda {
+  0% {
+    box-shadow: 0 0 8px rgba(255, 105, 0, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 16px rgba(255, 105, 0, 0.8);
+  }
+  100% {
+    box-shadow: 0 0 8px rgba(255, 105, 0, 0.4);
+  }
 }
