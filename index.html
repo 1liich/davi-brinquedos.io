@@ -7,21 +7,6 @@
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="icon" type="image/png" href="imagens/favicon_64x64.png">
-  <!-- SEO e compartilhamento -->
-<meta name="description" content="Locação de brinquedos para festas! Piscina de bolinhas, cama elástica, infláveis e muito mais com preços incríveis!" />
-
-<!-- Open Graph (Facebook, WhatsApp, etc) -->
-<meta property="og:title" content="Davi Brinquedos Entretenimento Infantil | Aluguel para festas" />
-<meta property="og:description" content="😃Abrilhante seu evento com nossos brinquedos. Sua criança merece👶🏼!" />
-<meta property="og:image" content="https://1liich.github.io/davi-brinquedos.io/imagens/logo-meta-tags.png" />
-<meta property="og:url" content="https://1liich.github.io/davi-brinquedos.io/" />
-<meta property="og:type" content="website" />
-
-<!-- Twitter Cards -->
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Davi Brinquedos Entretenimento Infantil | Aluguel para festas" />
-<meta name="twitter:description" content="😃Abrilhante seu evento com nossos brinquedos. Sua criança merece👶🏼!" />
-<meta name="twitter:image" content="https://1liich.github.io/davi-brinquedos.io/imagens/logo-meta-tags.png" />
   <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-BMQWXJ4BYS"></script>
 <script>
@@ -46,9 +31,12 @@
     
     <nav>
       <ul>
-    <li><a class="menu-link" href="#" onclick="voltarInicio()">Início</a></li>
-    <li><a class="menu-link" href="#" onclick="abrirAba('galeria-aba')">Galeria</a></li>
-    <li><a class="menu-link" href="#" onclick="abrirAba('contato-aba')">Contato</a></li>
+    <li><a class="menu-link" href="#" onclick="gtag('event', 'clique_menu_inicio', {event_category: 'menu', event_label: 'Início'}); voltarInicio()">Início</a>
+    </li>
+    <li><a class="menu-link" href="#" onclick="gtag('event', 'clique_menu_galeria', {event_category: 'menu', event_label: 'Galeria'}); abrirAba('galeria-aba')">Galeria</a>
+    </li>
+    <li><a class="menu-link" href="#" onclick="gtag('event', 'clique_menu_contato', {event_category: 'menu', event_label: 'Contato'}); abrirAba('contato-aba')">Contato</a>
+    </li>
       </ul>
     </nav>
   </header>
@@ -67,15 +55,15 @@
       <section class="botoes-inicio">
         <p class="texto-interacao">⬇️ ÁREA DE AGENDAMENTO:</p>
         <div class="bloco-botoes">
-          <a class="botao-interativo" href="https://wa.me/message/CHM5JDVXUUFQG1" target="_blank">
+          <a class="botao-interativo" href="https://wa.me/message/CHM5JDVXUUFQG1" target="_blank" onclick="gtag('event', 'clique_agendamento', {event_category: 'acoes_iniciais', event_label: 'WhatsApp Agendamento'});">
             <img src="imagens/whatsapp.png" alt="WhatsApp">
             <span>Fazer<br><strong>Agendamento</strong></span>
           </a>
-          <a class="botao-interativo" href="https://www.whatsapp.com/catalog/559292176095/" target="_blank">
+          <a class="botao-interativo" href="https://www.whatsapp.com/catalog/559292176095/" target="_blank" onclick="gtag('event', 'clique_catalogo', {event_category: 'acoes_iniciais', event_label: 'Catálogo WhatsApp'});">
             <img src="imagens/calendar.png" alt="Catálogo">
             <span>Ver<br><strong>Catálogo</strong></span>
           </a>
-          <a class="botao-interativo" href="https://facebook.com/seumarketplace" target="_blank">
+          <a class="botao-interativo" href="https://facebook.com/seumarketplace" target="_blank" onclick="gtag('event', 'clique_marketplace', {event_category: 'acoes_iniciais', event_label: 'Marketplace Facebook'});">
             <img src="imagens/facebook.png" alt="Facebook Marketplace">
             <span><strong>Marketplace</strong></span>
           </a>
@@ -128,7 +116,7 @@
           <div class="indicadores" id="indicadores"></div>
         </div>
         
-          <button class="ver-mais" onclick="abrirAba('galeria-aba')">🔍 Ver mais imagens</button>
+        <button class="ver-mais" onclick="gtag('event', 'clique_ver_mais_galeria', {event_category: 'galeria', event_label: 'Ver mais imagens'}); abrirAba('galeria-aba')">🔍 Ver mais imagens</button>
         </div>
       </section>
     </section>
@@ -180,17 +168,17 @@
         <h2>NOSSAS REDES:</h2>
       </div>
   
-      <div class="rede" onclick="window.open('https://instagram.com/davi_brinquedoss', '_blank')">
+      <div class="rede" onclick="gtag('event', 'clique_instagram', {event_category: 'redes_sociais', event_label: 'Instagram'}); window.open('https://instagram.com/davi_brinquedoss', '_blank')">
         <i class="fab fa-instagram"></i>
         <span>@davi_brinquedoss</span>
       </div>
   
-      <div class="rede" onclick="window.open('https://www.facebook.com/marketplace', '_blank')">
+      <div class="rede" onclick="gtag('event', 'clique_facebook', {event_category: 'redes_sociais', event_label: 'Marketplace Facebook'}); window.open('https://www.facebook.com/marketplace', '_blank')">
         <i class="fab fa-facebook"></i>
         <span>Marketplace</span>
       </div>
   
-      <div class="rede" onclick="window.open('https://wa.me/5592992176095', '_blank')">
+      <div class="rede" onclick="gtag('event', 'clique_whatsapp_rodapé', {event_category: 'redes_sociais', event_label: 'WhatsApp Rodapé'}); window.open('https://wa.me/5592992176095', '_blank')">
         <i class="fab fa-whatsapp"></i>
         <span>(92) 99217-6095</span>
       </div>
@@ -199,10 +187,17 @@
   </footer>
 
 
-  <!-- Botão WhatsApp Animado -->
-  <a href="https://wa.me/message/CHM5JDVXUUFQG1" target="_blank" aria-label="Abrir conversa no WhatsApp">
-    <div class="btn-whatsapp pulsaDelay"><i class="fab fa-whatsapp"></i></div>
-  </a>
+ <!-- Botão WhatsApp Animado -->
+<a href="https://wa.me/message/CHM5JDVXUUFQG1" 
+target="_blank" 
+aria-label="Abrir conversa no WhatsApp"
+onclick="gtag('event', 'botão_whatsapp_flutuante', {
+  'event_category': 'contato',
+  'event_label': 'botao_fixo_whatsapp'
+});">
+<div class="btn-whatsapp pulsaDelay"><i class="fab fa-whatsapp"></i></div>
+</a>
+
 
   <!-- Lightbox -->
   <div id="lightbox">
