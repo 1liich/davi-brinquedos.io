@@ -184,6 +184,15 @@ promocoes.forEach(promo => {
     <p>${promo.descricao}</p>
     <div class="preco">${promo.preco}</div>
   `;
+
+  // Adiciona o evento de clique com gtag
+  card.addEventListener("click", () => {
+    gtag('event', 'clique_promocao', {
+      event_category: 'promocoes',
+      event_label: promo.titulo
+    });
+  });
+  
   promoContainer.appendChild(card);
 });
 
