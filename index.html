@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Locação de Brinquedos</title>
   <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="icon" type="image/png" href="imagens/favicon_64x64.png">
   <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-BMQWXJ4BYS"></script>
@@ -16,6 +15,7 @@
 
   gtag('config', 'G-BMQWXJ4BYS');
 </script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
   <header>
@@ -198,6 +198,22 @@ onclick="gtag('event', 'botão_whatsapp_flutuante', {
 <div class="btn-whatsapp pulsaDelay"><i class="fab fa-whatsapp"></i></div>
 </a>
 
+<!-- Script para fallback do navegador do Instagram -->
+<script>
+  const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+  const isInstagramBrowser = userAgent.includes("Instagram");
+
+  if (isInstagramBrowser) {
+    const btn = document.getElementById("whatsapp-icon");
+    if (btn) {
+      btn.innerHTML = `
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#fff" viewBox="0 0 448 512">
+          <path d="M380.9 97.1C339-4.3 210.4-25.5 128.2 41.8 73.3 85.1 47.7 156.2 64.7 224c-3.3 24.1-12 47.4-25.3 67.9-3.3 5-2.4 11.5 2.1 15.3l56.5 47c4.7 3.9 11.5 4.5 16.8 1.3 19.4-11.3 40.3-18.8 62-21.9 66.2 38.5 150.2 24.6 201.1-34.9 50.7-59.1 57.1-146.2 14-212.6zM224 416c-23.2 0-45.9-5.7-66.4-16.4l-7.1-3.8-52.3 14 14-50.1-4.6-7.2c-11.2-17.4-17.1-37.6-17.1-58.5 0-82.7 67.3-150 150-150s150 67.3 150 150-67.3 150-150 150zm89.6-112.6-27.4-7.8c-3.7-1.1-7.7-.1-10.4 2.7l-12.6 13c-26.6-13.6-48.1-35-61.6-61.6l13-12.6c2.8-2.7 3.8-6.7 2.7-10.4l-7.8-27.4c-1.5-5.1-6.2-8.6-11.5-8.6h-17.5c-6.6 0-12 5.4-12 12 0 91.6 74.4 166 166 166 6.6 0 12-5.4 12-12v-17.5c0-5.3-3.5-10-8.6-11.5z"/>
+        </svg>
+      `;
+    }
+  }
+</script>
 
   <!-- Lightbox -->
   <div id="lightbox">
