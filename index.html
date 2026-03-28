@@ -3,117 +3,158 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Locação de Brinquedos</title>
+  <title>Davi Brinquedos – Locação de Brinquedos</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="icon" type="image/png" href="imagens/favicon_64x64.png">
-  <!-- Open Graph para Facebook, WhatsApp, etc -->
-<meta property="og:title" content="Locação de Brinquedos - Diversão garantida para a criançada!" />
-<meta property="og:description" content="Alugue brinquedos incríveis com preços acessíveis! Promoções personalizadas e atendimento via WhatsApp." />
-<meta property="og:image" content="https://raw.githubusercontent.com/1liich/davi-brinquedos.io/refs/heads/main/imagens/logo-meta-tags.png" />
-<meta property="og:url" content="https://1liich.github.io/davi-brinquedos.io/" />
-<meta property="og:type" content="website" />
 
-<!-- Twitter Card -->
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Locação de Brinquedos - Diversão garantida!" />
-<meta name="twitter:description" content="Oferecemos brinquedos incríveis para aluguel com condições especiais. Veja mais!" />
-<meta name="twitter:image" content="https://raw.githubusercontent.com/1liich/davi-brinquedos.io/refs/heads/main/imagens/logo-meta-tags.png" />
+  <!-- Open Graph -->
+  <meta property="og:title" content="Davi Brinquedos – Diversão garantida para a criançada!" />
+  <meta property="og:description" content="Alugue brinquedos incríveis com preços acessíveis! Promoções personalizadas e atendimento via WhatsApp." />
+  <meta property="og:image" content="https://raw.githubusercontent.com/1liich/davi-brinquedos.io/refs/heads/main/imagens/logo-meta-tags.png" />
+  <meta property="og:url" content="https://1liich.github.io/davi-brinquedos.io/" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
 
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-QHL1ZQDV1V"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-QHL1ZQDV1V');
-</script>
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-QHL1ZQDV1V"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-QHL1ZQDV1V');
+  </script>
 </head>
 <body>
-  <header>
-    <div class="header-container">
-      <div class="decor decor-esquerda">🎈</div>
-  
-      <div class="logo-header">
-        <img src="imagens/logo-davi-brinquedos.png" alt="Logo Brinquedos para Locação">
-      </div>
-  
-      <div class="decor decor-direita">⭐</div>
+
+  <!-- ============ HEADER ============ -->
+  <header id="header">
+    <div class="header-inner">
+      <a class="logo" href="#" onclick="voltarInicio()">
+        <img src="imagens/logo-davi-brinquedos.png" alt="Davi Brinquedos">
+      </a>
+
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav id="nav">
+        <a href="#" onclick="gtag('event','clique_menu_inicio',{event_category:'menu',event_label:'Início'}); voltarInicio(); fecharMenu()">Início</a>
+        <a href="#" onclick="gtag('event','clique_menu_galeria',{event_category:'menu',event_label:'Galeria'}); abrirAba('galeria-aba'); fecharMenu()">Galeria</a>
+        <a href="#" onclick="gtag('event','clique_menu_contato',{event_category:'menu',event_label:'Contato'}); abrirAba('contato-aba'); fecharMenu()">Contato</a>
+        <a class="nav-cta" href="https://wa.me/message/CHM5JDVXUUFQG1" target="_blank" onclick="gtag('event','clique_agendar_nav',{event_category:'menu',event_label:'Agendar Nav'})">
+          <i class="fab fa-whatsapp"></i> Agendar
+        </a>
+      </nav>
     </div>
-    
-    <nav>
-      <ul>
-    <li><a class="menu-link" href="#" onclick="gtag('event', 'clique_menu_inicio', {event_category: 'menu', event_label: 'Início'}); voltarInicio()">Início</a>
-    </li>
-    <li><a class="menu-link" href="#" onclick="gtag('event', 'clique_menu_galeria', {event_category: 'menu', event_label: 'Galeria'}); abrirAba('galeria-aba')">Galeria</a>
-    </li>
-    <li><a class="menu-link" href="#" onclick="gtag('event', 'clique_menu_contato', {event_category: 'menu', event_label: 'Contato'}); abrirAba('contato-aba')">Contato</a>
-    </li>
-      </ul>
-    </nav>
   </header>
 
-      <!-- Aqui entra a nota -->
-      <div class="carta-animada">
-        <div class="papel">
-          <p>✉️ Que tal presentear sua criança sem precisar comprometer o seu orçamento? Entre em contato conosco para ter acesso a descontos exclusivos e ​promoções personalizadas! Para mais informações, clique nas opções abaixo:</p>
-        </div>
-      </div>
-      
-      
+  <!-- ============ CONTEÚDO PRINCIPAL ============ -->
   <main>
-    <section id="conteudo-principal">
-      <!-- Botões Iniciais -->
-      <section class="botoes-inicio">
-        <p class="texto-interacao">⬇️ ÁREA DE AGENDAMENTO:</p>
-        <div class="bloco-botoes">
-          <a class="botao-interativo" href="https://wa.me/message/CHM5JDVXUUFQG1" target="_blank" onclick="gtag('event', 'clique_agendamento', {event_category: 'acoes_iniciais', event_label: 'WhatsApp Agendamento'});">
-            <img src="imagens/whatsapp.png" alt="WhatsApp">
-            <span>Fazer<br><strong>Agendamento</strong></span>
-          </a>
-          <a class="botao-interativo" href="https://www.whatsapp.com/catalog/559292176095/" target="_blank" onclick="gtag('event', 'clique_catalogo', {event_category: 'acoes_iniciais', event_label: 'Catálogo WhatsApp'});">
-            <img src="imagens/calendar.png" alt="Catálogo">
-            <span>Ver<br><strong>Catálogo</strong></span>
-          </a>
-          <a class="botao-interativo" href="https://facebook.com/seumarketplace" target="_blank" onclick="gtag('event', 'clique_marketplace', {event_category: 'acoes_iniciais', event_label: 'Marketplace Facebook'});">
-            <img src="imagens/facebook.png" alt="Facebook Marketplace">
-            <span><strong>Marketplace</strong></span>
-          </a>
+    <div id="conteudo-principal">
+
+      <!-- HERO -->
+      <section class="hero">
+        <div class="hero-bg-shapes">
+          <div class="shape shape-1"></div>
+          <div class="shape shape-2"></div>
+          <div class="shape shape-3"></div>
+        </div>
+        <div class="hero-content">
+          <div class="hero-badge">
+            <i class="fas fa-star"></i> Diversão na sua festa
+          </div>
+          <h1 class="hero-title">Brinquedos pra <span class="highlight">alegrar</span> sua criançada!</h1>
+          <p class="hero-sub">Locação de brinquedos com entrega, montagem e muito carinho. Preços acessíveis e atendimento personalizado via WhatsApp.</p>
+          <div class="hero-btns">
+            <a class="btn-primary" href="https://wa.me/message/CHM5JDVXUUFQG1" target="_blank" onclick="gtag('event','clique_agendamento',{event_category:'acoes_iniciais',event_label:'WhatsApp Agendamento'})">
+              <i class="fab fa-whatsapp"></i> Fazer Agendamento
+            </a>
+            <a class="btn-secondary" href="https://www.whatsapp.com/catalog/559292176095/" target="_blank" onclick="gtag('event','clique_catalogo',{event_category:'acoes_iniciais',event_label:'Catálogo WhatsApp'})">
+              <i class="fas fa-book-open"></i> Ver Catálogo
+            </a>
+          </div>
+          <div class="hero-stats">
+            <div class="stat"><strong>🎉</strong><span>Festas atendidas</span></div>
+            <div class="stat-divider"></div>
+            <div class="stat"><strong>⚡</strong><span>Entrega rápida</span></div>
+            <div class="stat-divider"></div>
+            <div class="stat"><strong>💬</strong><span>Suporte WhatsApp</span></div>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="hero-img-wrapper">
+            <img src="imagens/IMG-20230426-WA0059.jpg" alt="Brinquedos para locação" class="hero-img">
+            <div class="hero-img-badge">
+              <i class="fas fa-shield-alt"></i> Seguro & Higienizado
+            </div>
+          </div>
         </div>
       </section>
-    
-  
-      <!-- Promoções -->
-<section id="promocoes">
-  <div class="titulo-centralizado">
-    <div class="redes-titulo">
-      <i class="fas fa-arrow-down icone-seta"></i>
-      <h2>PROMOÇÕES</h2>
-    </div>
-  </div>
 
-  <!-- Função de promoção -->
-<section class="secao-promocoes">
-  <div class="promo-cards-container" id="promo-container">
-    <!-- Cards inseridos via JS -->
-  </div>
-</section>
-
-  <div class="promo-container">
-  </div>
-</section>
-
-      <!-- Galeria resumida (com carrossel) na HOME -->
-      <section id="galeria">
-        <div class="titulo-centralizado">
-        <div class="redes-titulo">
-          <i class="fas fa-arrow-down icone-seta"></i>
-          <h2>BRINQUEDOS</h2>
+      <!-- AVISO PROMOÇÃO -->
+      <div class="promo-banner reveal">
+        <div class="promo-banner-inner">
+          <i class="fas fa-envelope-open-text"></i>
+          <p>Quer presentear sua criança sem comprometer o orçamento? <strong>Entre em contato</strong> para ter acesso a descontos exclusivos e promoções personalizadas!</p>
+          <a href="https://wa.me/5592992176095" target="_blank" class="btn-promo-banner">Quero meu desconto <i class="fas fa-arrow-right"></i></a>
         </div>
+      </div>
+
+      <!-- DIFERENCIAIS -->
+      <section class="diferenciais reveal">
+        <div class="section-label">Por que nos escolher?</div>
+        <h2 class="section-title">Tudo que você precisa para a festa perfeita</h2>
+        <div class="diferenciais-grid">
+          <div class="diferencial-card">
+            <div class="diferencial-icon" style="background:#FFF0E6;color:#FF6B35">
+              <i class="fas fa-truck-fast"></i>
+            </div>
+            <h3>Entrega e Montagem</h3>
+            <p>Levamos, montamos e buscamos. Você não precisa se preocupar com nada.</p>
+          </div>
+          <div class="diferencial-card">
+            <div class="diferencial-icon" style="background:#E8F5E9;color:#2E7D32">
+              <i class="fas fa-shield-alt"></i>
+            </div>
+            <h3>Seguro e Higienizado</h3>
+            <p>Todos os brinquedos higienizados e em ótimo estado para a segurança das crianças.</p>
+          </div>
+          <div class="diferencial-card">
+            <div class="diferencial-icon" style="background:#EDE7F6;color:#5E35B1">
+              <i class="fas fa-tags"></i>
+            </div>
+            <h3>Preço Acessível</h3>
+            <p>Promoções e pacotes personalizados para caber no seu orçamento.</p>
+          </div>
+          <div class="diferencial-card">
+            <div class="diferencial-icon" style="background:#E3F2FD;color:#1565C0">
+              <i class="fab fa-whatsapp"></i>
+            </div>
+            <h3>Atendimento WhatsApp</h3>
+            <p>Tire suas dúvidas e faça seu agendamento diretamente pelo WhatsApp.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROMOÇÕES -->
+      <section id="promocoes" class="reveal">
+        <div class="section-label">Ofertas especiais</div>
+        <h2 class="section-title">Promoções</h2>
+        <div class="promo-cards-container" id="promo-container"></div>
+      </section>
+
+      <!-- GALERIA COM CARROSSEL -->
+      <section id="galeria" class="reveal">
+        <div class="section-label">Nosso acervo</div>
+        <h2 class="section-title">Brinquedos disponíveis</h2>
         <div class="carrossel-container">
-          <button class="carrossel-btn prev">‹</button>
-        
+          <button class="carrossel-btn prev" aria-label="Anterior">
+            <i class="fas fa-chevron-left"></i>
+          </button>
           <div class="carrossel-wrapper">
             <div class="carrossel" id="carrossel">
               <img src="imagens/IMG-20230426-WA0033.jpg" alt="Brinquedo 1">
@@ -123,114 +164,177 @@
               <img src="imagens/e338c962-b5ad-408c-9abd-6100ed9f7f10.jpg" alt="Brinquedo 5">
             </div>
           </div>
-        
-          <button class="carrossel-btn next">›</button>
-        
+          <button class="carrossel-btn next" aria-label="Próximo">
+            <i class="fas fa-chevron-right"></i>
+          </button>
           <div class="indicadores" id="indicadores"></div>
         </div>
-        
-        <button class="ver-mais" onclick="gtag('event', 'clique_ver_mais_galeria', {event_category: 'galeria', event_label: 'Ver mais imagens'}); abrirAba('galeria-aba')">🔍 Ver mais imagens</button>
+        <div class="galeria-cta">
+          <button class="btn-ver-mais" onclick="gtag('event','clique_ver_mais_galeria',{event_category:'galeria',event_label:'Ver mais imagens'}); abrirAba('galeria-aba')">
+            <i class="fas fa-images"></i> Ver galeria completa
+          </button>
         </div>
       </section>
-    </section>
-  
-    <!-- ABA GALERIA: todas imagens -->
-    <section id="galeria-aba" class="aba-conteudo oculto">
-      <div class="titulo-centralizado">
-        <div class="redes-titulo">
-          <i class="fas fa-arrow-down icone-seta"></i>
-          <h2>GALERIA COMPLETA</h2>
+
+      <!-- CTA FINAL -->
+      <section class="cta-section reveal">
+        <div class="cta-inner">
+          <h2>Pronto para garantir a diversão?</h2>
+          <p>Fale agora com a gente no WhatsApp e garanta a melhor festa para sua criança!</p>
+          <div class="cta-btns">
+            <a class="btn-primary" href="https://wa.me/message/CHM5JDVXUUFQG1" target="_blank" onclick="gtag('event','clique_agendamento_cta',{event_category:'cta_final',event_label:'WhatsApp CTA'})">
+              <i class="fab fa-whatsapp"></i> Agendar agora
+            </a>
+            <a class="btn-outline" href="https://facebook.com/seumarketplace" target="_blank" onclick="gtag('event','clique_marketplace',{event_category:'acoes_iniciais',event_label:'Marketplace Facebook'})">
+              <i class="fab fa-facebook"></i> Ver no Marketplace
+            </a>
+          </div>
         </div>
-        <div class="galeria-container">
-          <img src="https://i.postimg.cc/8c5ndKtJ/30008a3f-a22b-469e-a667-f2be42fdc649.jpg" alt="Brinquedo 1" class="galeria-img">
-          <img src="https://i.postimg.cc/Hnhv6whS/9aa505d1-7805-4757-950a-512891cf4504.jpg" alt="Brinquedo 2" class="galeria-img">
-          <img src="https://i.postimg.cc/KcqWcb8n/e338c962-b5ad-408c-9abd-6100ed9f7f10.jpg" alt="Brinquedo 3" class="galeria-img">
-          <img src="https://i.postimg.cc/HxTNnsMt/IMG-20230426-WA0033.jpg" alt="Brinquedo 4" class="galeria-img">
-          <img src="https://i.postimg.cc/gJ4TZFqb/IMG-20230426-WA0059.jpg" alt="Brinquedo 5" class="galeria-img">
-          <img src="https://i.postimg.cc/jS3Tg51F/384102810-24688708847386713-5923806648322226859-n-1.jpg" alt="Brinquedo 6" class="galeria-img">
-          <img src="https://i.postimg.cc/c1fsxdKv/5b9539eb-123e-4933-ad8d-9c7e8bdc8412.jpg" alt="Brinquedo 7" class="galeria-img">
-          <img src="https://i.postimg.cc/CLNS8JsY/681f31c9-0e9a-4ee4-aab1-40875f11566f.jpg" alt="Brinquedo 8" class="galeria-img">
-          <img src="https://i.postimg.cc/9FVczsTJ/85b502f0-b900-45cd-a08a-f276c4a78846.jpg" alt="Brinquedo 9" class="galeria-img">
-          <img src="https://i.postimg.cc/m2bGTCfn/c6e91a4f-3ad9-4d2e-b08b-89fbeff70d64.jpg" alt="Brinquedo 10" class="galeria-img">
-          <img src="https://i.postimg.cc/mZ3sxVqM/f3c9f7df-80ae-4be8-bac3-11dcb2fed713.jpg" alt="Brinquedo 11" class="galeria-img">
-          <img src="https://i.postimg.cc/fTbgHKhM/IMG-20230426-WA0023.jpg" alt="Brinquedo 12" class="galeria-img">
-          <!-- ... -->
-        </div>
-        <button class="btn-voltar vibrar" onclick="voltarInicio()">⬅️ Voltar</button>
+      </section>
+
+    </div><!-- /conteudo-principal -->
+
+    <!-- ========== ABA GALERIA ========== -->
+    <section id="galeria-aba" class="aba-conteudo">
+      <div class="aba-header">
+        <button class="btn-voltar" onclick="voltarInicio()">
+          <i class="fas fa-arrow-left"></i> Voltar
+        </button>
+        <h2>Galeria Completa</h2>
+        <p>Conheça todos os brinquedos disponíveis para locação</p>
+      </div>
+      <div class="galeria-container">
+        <img src="https://i.postimg.cc/8c5ndKtJ/30008a3f-a22b-469e-a667-f2be42fdc649.jpg" alt="Brinquedo 1" class="galeria-img">
+        <img src="https://i.postimg.cc/Hnhv6whS/9aa505d1-7805-4757-950a-512891cf4504.jpg" alt="Brinquedo 2" class="galeria-img">
+        <img src="https://i.postimg.cc/KcqWcb8n/e338c962-b5ad-408c-9abd-6100ed9f7f10.jpg" alt="Brinquedo 3" class="galeria-img">
+        <img src="https://i.postimg.cc/HxTNnsMt/IMG-20230426-WA0033.jpg" alt="Brinquedo 4" class="galeria-img">
+        <img src="https://i.postimg.cc/gJ4TZFqb/IMG-20230426-WA0059.jpg" alt="Brinquedo 5" class="galeria-img">
+        <img src="https://i.postimg.cc/jS3Tg51F/384102810-24688708847386713-5923806648322226859-n-1.jpg" alt="Brinquedo 6" class="galeria-img">
+        <img src="https://i.postimg.cc/c1fsxdKv/5b9539eb-123e-4933-ad8d-9c7e8bdc8412.jpg" alt="Brinquedo 7" class="galeria-img">
+        <img src="https://i.postimg.cc/CLNS8JsY/681f31c9-0e9a-4ee4-aab1-40875f11566f.jpg" alt="Brinquedo 8" class="galeria-img">
+        <img src="https://i.postimg.cc/9FVczsTJ/85b502f0-b900-45cd-a08a-f276c4a78846.jpg" alt="Brinquedo 9" class="galeria-img">
+        <img src="https://i.postimg.cc/m2bGTFfn/c6e91a4f-3ad9-4d2e-b08b-89fbeff70d64.jpg" alt="Brinquedo 10" class="galeria-img">
+        <img src="https://i.postimg.cc/mZ3sxVqM/f3c9f7df-80ae-4be8-bac3-11dcb2fed713.jpg" alt="Brinquedo 11" class="galeria-img">
+        <img src="https://i.postimg.cc/fTbgHKhM/IMG-20230426-WA0023.jpg" alt="Brinquedo 12" class="galeria-img">
+      </div>
+      <div class="aba-footer-btns">
+        <a class="btn-primary" href="https://wa.me/message/CHM5JDVXUUFQG1" target="_blank">
+          <i class="fab fa-whatsapp"></i> Agendar agora
+        </a>
+        <button class="btn-outline" onclick="voltarInicio()">
+          <i class="fas fa-arrow-left"></i> Voltar ao início
+        </button>
       </div>
     </section>
-  
-    <!-- ABA CONTATO -->
-    <section id="contato-aba" class="aba-conteudo oculto">
-      <h2>Contato</h2>
-      <p>Entre em contato para agendar sua locação!</p>
-      <p><strong>WhatsApp:</strong> <a href="https://wa.me/SEUNUMERO" target="_blank">Clique aqui</a></p>
-      <p><strong>Email:</strong> brinquedos@email.com</p>
-      <br>
-      <button class="btn-voltar" onclick="voltarInicio()">⬅️ Voltar</button>
+
+    <!-- ========== ABA CONTATO ========== -->
+    <section id="contato-aba" class="aba-conteudo">
+      <div class="aba-header">
+        <button class="btn-voltar" onclick="voltarInicio()">
+          <i class="fas fa-arrow-left"></i> Voltar
+        </button>
+        <h2>Fale Conosco</h2>
+        <p>Estamos prontos para atender você!</p>
+      </div>
+      <div class="contato-cards">
+        <a class="contato-card" href="https://wa.me/5592992176095" target="_blank">
+          <div class="contato-icon" style="background:#E8F5E9;color:#25D366"><i class="fab fa-whatsapp"></i></div>
+          <div>
+            <strong>WhatsApp</strong>
+            <span>(92) 99217-6095</span>
+          </div>
+          <i class="fas fa-arrow-right contato-arrow"></i>
+        </a>
+        <a class="contato-card" href="https://instagram.com/davi_brinquedoss" target="_blank">
+          <div class="contato-icon" style="background:#FCE4EC;color:#E91E8C"><i class="fab fa-instagram"></i></div>
+          <div>
+            <strong>Instagram</strong>
+            <span>@davi_brinquedoss</span>
+          </div>
+          <i class="fas fa-arrow-right contato-arrow"></i>
+        </a>
+        <a class="contato-card" href="https://www.facebook.com/marketplace" target="_blank">
+          <div class="contato-icon" style="background:#E3F2FD;color:#1877F2"><i class="fab fa-facebook"></i></div>
+          <div>
+            <strong>Facebook Marketplace</strong>
+            <span>Ver nossos anúncios</span>
+          </div>
+          <i class="fas fa-arrow-right contato-arrow"></i>
+        </a>
+        <a class="contato-card" href="mailto:brinquedos@email.com">
+          <div class="contato-icon" style="background:#FFF3E0;color:#FF6B35"><i class="fas fa-envelope"></i></div>
+          <div>
+            <strong>E-mail</strong>
+            <span>brinquedos@email.com</span>
+          </div>
+          <i class="fas fa-arrow-right contato-arrow"></i>
+        </a>
+      </div>
+      <div class="aba-footer-btns">
+        <button class="btn-outline" onclick="voltarInicio()">
+          <i class="fas fa-arrow-left"></i> Voltar ao início
+        </button>
+      </div>
     </section>
+
   </main>
-  
 
-  <footer id="contato">
-    <p>Entre em contato para agendar sua locação!</p>
-  
-    <section class="redes-sociais">
-      <div class="redes-titulo">
-        <i class="fas fa-arrow-down icone-seta"></i>
-        <h2>NOSSAS REDES:</h2>
+  <!-- ============ FOOTER ============ -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="imagens/logo-davi-brinquedos.png" alt="Davi Brinquedos" class="footer-logo">
+        <p>Diversão e alegria para a criançada com segurança e preço justo.</p>
       </div>
-  
-      <div class="rede" onclick="gtag('event', 'clique_instagram', {event_category: 'redes_sociais', event_label: 'Instagram'}); window.open('https://instagram.com/davi_brinquedoss', '_blank')">
-        <i class="fab fa-instagram"></i>
-        <span>@davi_brinquedoss</span>
+      <div class="footer-links">
+        <h4>Redes Sociais</h4>
+        <div class="footer-social">
+          <a href="https://instagram.com/davi_brinquedoss" target="_blank" onclick="gtag('event','clique_instagram',{event_category:'redes_sociais',event_label:'Instagram'})">
+            <i class="fab fa-instagram"></i> @davi_brinquedoss
+          </a>
+          <a href="https://www.facebook.com/marketplace" target="_blank" onclick="gtag('event','clique_facebook',{event_category:'redes_sociais',event_label:'Marketplace Facebook'})">
+            <i class="fab fa-facebook"></i> Marketplace
+          </a>
+          <a href="https://wa.me/5592992176095" target="_blank" onclick="gtag('event','clique_whatsapp_rodapé',{event_category:'redes_sociais',event_label:'WhatsApp Rodapé'})">
+            <i class="fab fa-whatsapp"></i> (92) 99217-6095
+          </a>
+        </div>
       </div>
-  
-      <div class="rede" onclick="gtag('event', 'clique_facebook', {event_category: 'redes_sociais', event_label: 'Marketplace Facebook'}); window.open('https://www.facebook.com/marketplace', '_blank')">
-        <i class="fab fa-facebook"></i>
-        <span>Marketplace</span>
+      <div class="footer-cta">
+        <h4>Agendar agora</h4>
+        <p>Fale com a gente pelo WhatsApp</p>
+        <a class="btn-primary" href="https://wa.me/message/CHM5JDVXUUFQG1" target="_blank">
+          <i class="fab fa-whatsapp"></i> Iniciar conversa
+        </a>
       </div>
-  
-      <div class="rede" onclick="gtag('event', 'clique_whatsapp_rodapé', {event_category: 'redes_sociais', event_label: 'WhatsApp Rodapé'}); window.open('https://wa.me/5592992176095', '_blank')">
-        <i class="fab fa-whatsapp"></i>
-        <span>(92) 99217-6095</span>
-      </div>
-  
-    </section>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Davi Brinquedos. Todos os direitos reservados.</p>
+    </div>
   </footer>
-
-
- <!-- Botão WhatsApp Animado -->
- <a href="https://wa.me/message/CHM5JDVXUUFQG1"
- target="_blank"
- aria-label="Abrir conversa no WhatsApp"
- onclick="gtag('event', 'botão_whatsapp_flutuante', {
-   'event_label': 'botao_fixo_whatsapp'
- });">
-<div class="btn-whatsapp pulsaDelay" style="background-color: #25D366; border-radius: 50%; width: 60px; height: 60px; display: flex; justify-content: center; align-items: center; box-shadow: 0 0 15px rgba(0,0,0,0.2);">
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="36" height="36" fill="#fff">
-    <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7 .9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/>
-  </svg>
-</div>
-</a>
-
 
   <!-- Lightbox -->
   <div id="lightbox">
-    <button id="lightbox-fechar">✖</button>
-    <button id="lightbox-prev">❮</button>
+    <button id="lightbox-fechar" aria-label="Fechar"><i class="fas fa-times"></i></button>
+    <button id="lightbox-prev" aria-label="Anterior"><i class="fas fa-chevron-left"></i></button>
     <img class="imagem-lightbox" src="" alt="Imagem ampliada">
-    <button id="lightbox-next">❯</button>
+    <button id="lightbox-next" aria-label="Próximo"><i class="fas fa-chevron-right"></i></button>
   </div>
 
-  <button id="btn-topo" onclick="voltarAoTopo()" title="Voltar ao topo">
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-up">
-      <line x1="12" y1="19" x2="12" y2="5"></line>
-      <polyline points="5 12 12 5 19 12"></polyline>
+  <!-- WhatsApp Flutuante -->
+  <a href="https://wa.me/message/CHM5JDVXUUFQG1" target="_blank" class="btn-whatsapp-float" aria-label="Abrir conversa no WhatsApp"
+    onclick="gtag('event','botão_whatsapp_flutuante',{'event_label':'botao_fixo_whatsapp'})">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="30" height="30" fill="#fff">
+      <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7 .9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/>
     </svg>
+    <span class="wpp-tooltip">Fale conosco!</span>
+  </a>
+
+  <!-- Botão Topo -->
+  <button id="btn-topo" onclick="voltarAoTopo()" title="Voltar ao topo" aria-label="Voltar ao topo">
+    <i class="fas fa-arrow-up"></i>
   </button>
-  
-  
+
   <script src="script.js"></script>
 </body>
 </html>
