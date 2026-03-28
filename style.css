@@ -1128,8 +1128,11 @@ footer {
   .hamburger { display: flex; }
   nav {
     position: fixed;
-    inset: var(--header-h) 0 0 0;
-    background: var(--primary);
+    top: var(--header-h);
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #1a0a4e;
     flex-direction: column;
     align-items: stretch;
     padding: 24px;
@@ -1137,15 +1140,22 @@ footer {
     transform: translateX(100%);
     transition: transform var(--transition);
     z-index: 999;
+    overflow-y: auto;
   }
   nav.open { transform: translateX(0); }
   nav a {
     font-size: 1.1rem;
-    padding: 14px 20px;
+    padding: 16px 20px;
     border-radius: var(--radius-sm);
+    background: rgba(255,255,255,0.05);
+    color: #fff !important;
   }
-  nav a:hover { background: rgba(255,255,255,0.1); }
-  .nav-cta { justify-content: center; }
+  nav a:hover { background: rgba(255,255,255,0.12); }
+  .nav-cta {
+    justify-content: center;
+    background: var(--green) !important;
+    margin-top: 8px;
+  }
   .hero-btns { flex-direction: column; }
   .hero-stats { gap: 12px; }
   .footer-inner { grid-template-columns: 1fr; gap: 32px; }
