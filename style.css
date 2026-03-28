@@ -172,6 +172,35 @@ a { text-decoration: none; }
   object-fit: contain;
 }
 
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.logo-nome {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 900;
+  font-size: 1.05rem;
+  color: #fff;
+  line-height: 1.2;
+  letter-spacing: 0.2px;
+}
+
+.logo-sub {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 0.72rem;
+  color: rgba(255, 255, 255, 0.6);
+  letter-spacing: 0.5px;
+}
+
 nav {
   display: flex;
   align-items: center;
